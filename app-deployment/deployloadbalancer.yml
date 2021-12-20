@@ -1,0 +1,12 @@
+apiVersion: v1 
+kind: Service 
+metadata:
+  name: mydeploy-loadbal
+spec:
+ type: LoadBalancer
+ selector:
+  tier: front-end
+ ports:
+  - name: http 
+    port: 80
+    targetPort: 80
